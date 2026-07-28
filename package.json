@@ -9,10 +9,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "astro": "astro",
-    "deploy": "wrangler deploy",
-    "preview": "wrangler dev"
+    "deploy": "bun run build && wrangler deploy",
+    "preview": "bun run build && wrangler dev",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.1.5",
     "@astrojs/mdx": "^7.0.4",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
